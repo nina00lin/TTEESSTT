@@ -1,0 +1,50 @@
+#ifdef __cplusplus
+extern "C" {               /* dont allow C++ name mangling on the callbacks */
+#endif
+
+
+short GET_RECORD (char *buf, short *len,
+                  short *io_type, short source_or_target);
+
+short GET_EXITPARAM_VALUE (char *exit_parm, short *len);
+
+short GET_TRANSACTION_IND (short *trans_ind);
+
+short GET_RECORD_LENGTH (short *record_len, short source_or_target);
+
+short GET_NUM_COLUMNS (short *num_columns, short source_or_target);
+
+short DECOMPRESS_RECORD (char *compressed_rec,
+                         short compressed_len,
+                         char *decompressed_rec,
+                         short *columns_present,
+                         short source_or_target);
+
+short COMPRESS_RECORD (char *compressed_rec, short *compressed_len,
+                       char *decompressed_rec, short *columns_present,
+                       short source_or_target);
+
+short GET_COLUMN_NAME (short column_index, char *column_name,
+                       short max_name_len, short source_or_target);
+
+short GET_COLUMN_INDEX (short *column_index, char *column_name,
+                        short source_or_target);
+
+short GET_ENV_VALUE (short requestcode, char *buf, long maxlen,
+                     long *actuallen, short *truncated);
+short GET_SYSKEY_LENGTH (short *syskeylen, short source_or_target);
+short GET_FILENAME (short *fname, short source_or_target);
+short GET_EXTRBA(long long *rba);
+short GET_EXTSEQNO(long *seqno);
+short GGS_REPORTMESSAGE(char *);
+short GGS_EMSMESSAGE(int evt, char *text, int severity);
+short GET_FOPEN_NUM(short *fopen_num);
+short GET_ALTKEY_INFO (short *keytag, short *keyoff, short *keylen);
+short FETCH_CURRENT_RECORD (error_info_def *error_info_ptr);
+short FETCH_CURRENT_RECORD_WITH_LOCK (error_info_def *error_info_ptr);
+short GET_USER_TOKEN_VALUE (user_token_value_def *utoken_value_ptr);
+short GET_GGS_TOKEN_VALUE (gg_token_value_def *gtoken_value_ptr);
+
+#ifdef __cplusplus
+}
+#endif

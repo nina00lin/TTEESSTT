@@ -1,0 +1,441 @@
+#pragma section error_codes
+#define GGS_EVT_SQL_OP 100
+#define GGS_EVT_STARTUP_PARAM 101
+#define GGS_EVT_AUDIT_MISSING 102
+#define GGS_EVT_FILE 103
+#define GGS_EVT_AUDIT_READ 104
+#define GGS_EVT_MEM_ALLOC 105
+#define GGS_EVT_BAD_PROCESS_GROUP 106
+#define GGS_EVT_SPI_PROCESS 107
+#define GGS_EVT_BAD_SECURITY 108
+#define GGS_EVT_SQL 109
+#define GGS_EVT_ABEND_RECOVERY 110
+#define GGS_EVT_COMPILE_WHERE 111
+#define GGS_EVT_EXTRACT_FILE 112
+#define GGS_EVT_GROUP_DUP 113
+#define GGS_EVT_TRACE_FILE 114
+#define GGS_EVT_MAXFILES 115
+#define GGS_EVT_AUDIT_SERVER 116
+#define GGS_EVT_USER_EXIT 117
+#define GGS_EVT_RMT_FILE 118
+#define GGS_EVT_REP_NEW_COLUMN_ERR 119
+#define GGS_EVT_WRONG_VERSION 120
+#define GGS_EVT_REP_LOAD_FAILED 121
+#define GGS_EVT_MGR_CHILD_EXISTS 122
+#define GGS_EVT_AUDIT_NEXTTRAIL 123
+#define GGS_EVT_TCPIP 150
+#define GGS_EVT_SYNC_DUPPROC_ABEND 160
+#define GGS_EVT_EXT_ABEND 190
+#define GGS_EVT_REP_ABEND 191
+#define GGS_EVT_MGR_ABEND 192
+#define GGS_EVT_SERVER_ABEND 193
+#define GGS_EVT_SYNC_ABEND 194
+#define GGS_EVT_TMF_ERROR 195
+#define GGS_EVT_FILE_ALTER 200
+#define GGS_EVT_AUDIT_FORCE 203
+#define GGS_EVT_AUDIT_COMPRESSED 204
+#define GGS_EVT_EVENT_DISCONTINUITY 206
+#define GGS_EVT_NO_CONTEXT_REC 207
+#define GGS_EVT_RECORD_VERSION 208
+#define GGS_EVT_DUP_ERROR 209
+#define GGS_EVT_FILE_NO_AUDIT 210
+#define GGS_EVT_TAPE_RESTORE_NOW 211
+#define GGS_EVT_TAPE_RESTORE 212
+#define GGS_EVT_FETCH_RECORD 213
+#define GGS_EVT_MISSING_INFO 216
+#define GGS_EVT_REP_PROBLEM 219
+#define GGS_EVT_TRANS_ABORTED 220
+#define GGS_EVT_MISSING_TRANS_BEGIN 221
+#define GGS_EVT_MAPPING_PROBLEM 222
+#define GGS_EVT_TRANS_ABORT 223
+#define GGS_EVT_ROLLOVER 224
+#define GGS_EVT_CHECKPOINT_OPEN 225
+#define GGS_EVT_PURGE_EXTRACT 226
+#define GGS_EVT_INSERT_KEYSEQ_ONLY 227
+#define GGS_EVT_LOG_ROLLOVER 228
+#define GGS_EVT_PURGE_LOG 229
+#define GGS_EVT_CREATE_LOG_FAILED 230
+#define GGS_EVT_MGR_STOPPED 231
+#define GGS_EVT_NO_UPDATE_COLUMNS 232
+#define GGS_EVT_ABNORMAL_STOP 233
+#define GGS_EVT_SYNC_DUP_FILESET_ERR 252
+#define GGS_EVT_SYNC_DUP_FILE_ERR 253
+#define GGS_EVT_COLL_OPEN_FILE_ERR 261
+#define GGS_EVT_COLL_IO_ERR 262
+#define GGS_EVT_REP_WAIT_CANCELLED 280
+#define GGS_EVT_REP_WAIT_CRITICAL 281
+#define GGS_EVT_PROCESSED_MARKER 300
+#define GGS_EVT_USER_CMD 301
+#define GGS_EVT_REP_STARTED 302
+#define GGS_EVT_EXT_STARTED 303
+#define GGS_EVT_FILE_ERR_RECOVERED 304
+#define GGS_EVT_TCP_ERR_RECOVERED 305
+#define GGS_EVT_EXT_STOP_NORMAL 306
+#define GGS_EVT_EXT_STOP_USER 307
+#define GGS_EVT_REP_STOP_NORMAL 308
+#define GGS_EVT_REP_STOP_USER 309
+#define GGS_EVT_MGR_PROCESS_RUNNING 310
+#define GGS_EVT_MGR_PROCESS_DOWN_OK 311
+#define GGS_EVT_MGR_PROCESS_ABENDED 312
+#define GGS_EVT_MGR_STARTED 313
+#define GGS_EVT_MGR_MADE_AUDIT_COPY 314
+#define GGS_EVT_MGR_PURGED_AUDIT_COPY 315
+#define GGS_EVT_MGR_AT_THRESHOLD 316
+#define GGS_EVT_MGR_AT_DISK_THRESHOLD 317
+#define GGS_EVT_CREATE_LOG 318
+#define GGS_EVT_MGR_LOG_THRESHOLD 319
+#define GGS_EVT_MGR_RESTARTED_PROCESS 320
+#define GGS_EVT_MGR_LAG_THRESHOLD 321
+#define GGS_EVT_COORD_STARTED 322
+#define GGS_EVT_COORD_ABEND 323
+#define GGS_EVT_COORD_STOP_USER 324
+#define GGS_EVT_COORD_STOP_NORMAL 325
+#define GGS_EVT_DRUM_STARTED 326
+#define GGS_EVT_DRUM_ABEND 327
+#define GGS_EVT_DRUM_STOP_USER 328
+#define GGS_EVT_DRUM_STOP_NORMAL 329
+#define GGS_EVT_REP_NEW_COLUMN 330
+#define GGS_EVT_CREATE_DRUMMER_FAILED 331
+#define GGS_EVT_MGR_SLAVE 332
+#define GGS_EVT_MGR_CHILD 333
+#define GGS_EVT_CHILD_ADDEDEXISTING 340
+#define GGS_EVT_CHILD_NOTADDED 341
+#define GGS_EVT_NONSTOP 350
+#define GGS_EVT_CPUDOWN 351
+#define GGS_EVT_CHILDDOWN 352
+#define GGS_EVT_CPUUP 353
+#define GGS_EVT_SYNC_STARTED 360
+#define GGS_EVT_SYNC_STOP_USER 361
+#define GGS_EVT_SYNC_DUP_FILESET 362
+#define GGS_EVT_REP_RETRY_OP 363
+#define GGS_EVT_COLL_OPENING_FILE 370
+#define GGS_EVT_COLL_CLOSING_FILE 371
+#define GGS_EVT_COLL_TERMINATING 372
+#define GGS_EVT_COLL_LISTENING 373
+#define GGS_EVT_REP_WAIT_FEVENT 380
+#define GGS_EVT_REP_WAIT_COMPLETED 381
+#define GGS_EVT_OPENED_SOURCE_FILE 382
+#define GGS_EVT_CLOSED_SOURCE_FILE 383
+#define GGS_EVT_GROUPLIST 384
+#define GGS_EVT_TASK 385
+#define GGS_EVT_CHKPT_REC_DELETED 386
+#define GGS_EVT_EXTTRAIL_POS 387
+#define GGS_EVT_WC_MAPPED_INTERNAL 388
+#define GGS_EVT_CHKPT_REC_CORRUPT 389
+#pragma section extract_read_constants
+#define XR_OK 0
+/**/
+/* Warnings */
+/**/
+#define XR_EOF 400
+#define XR_NETWORK_ERR 401
+/**/
+/* Errors */
+/**/
+#define XR_FILE_ERR 500
+#define XR_OPEN_ERR 501
+#define XR_BAD_PARAMS 502
+#define XR_EXTRACT_FILE_NAME 503
+#define XR_GROUP_RUNNING 504
+#define XR_MUST_INIT 505
+#define XR_MUST_START 506
+#define XR_GROUP_NONEXISTENT 507
+#define XR_EXTRACT_NOT_FOUND 508
+#define XR_BAD_EXTRACT_DATA 509
+#define XR_GROUP_CORRUPTED 510
+#define XR_INIT_CHECKPOINT 511
+/* jas 10/09/02 case 4725 pulled over from NT/Unix */
+#define XR_XFER_PROBLEM 512
+#define XR_BUF_OVERFLOW 513
+#define XR_LOGIC_ERROR 514
+#define XR_TRANSACTION_ERROR 515
+#define XR_CHECKPOINT_ERROR 516
+/**/
+/**/
+/* Logger Events */
+/**/
+#define GGS_EVT_LOGR_FILE_ERR 1000
+#define GGS_EVT_LOGR_SHUTDOWN_RQST 1008
+#define GGS_EVT_LOGR_SHUTDOWN_COMPLETE 1009
+#define GGS_EVT_LOGR_ABEND 1010
+#define GGS_EVT_LOGR_STARTED 1011
+#define GGS_EVT_LOGR_SIGNALTIMEOUT 1012
+#define GGS_EVT_LOGR_CANCELTIMEOUT 1013
+#define GGS_EVT_POOL_CREATE_ERR 1500
+#define GGS_EVT_POOL_GET_ERR 1502
+#define GGS_EVT_POOL_PUT_ERR 1503
+#define GGS_EVT_LOGR_LOGCONF_ERR 1600
+#define GGS_EVT_LOGR_TRAIL_OPEN 1800
+#define GGS_EVT_LOGR_TRAIL_CLOSED 1801
+#define GGS_EVT_LOGR_TRAIL_SWITCH 1802
+#define GGS_EVT_LOGR_LOGGING_DISABLED 1803
+#define GGS_EVT_LOGR_LOGGING_ENABLED 1804
+/**/
+/* Checkpointing constants */
+/**/
+#define USE_LAST_POSITION 0
+#define USE_NEXT_POSITION 1
+#pragma section exit_constants
+/* EXIT-CONSTANTS */
+#define EXIT_REC_TYPE_ENSCRIBE "ENS "
+#define EXIT_REC_TYPE_SQL "SQL "
+#define UPDATE_VAL 10
+#define INSERT_VAL 5
+#define DELETE_VAL 3
+#define UPDATE_COMP_ENSCRIBE_VAL 11
+#define UPDATE_COMP_SQL_VAL 15
+#define UPDATE_COMP_PK_SQL_VAL 115
+#define EXIT_OK_VAL 1
+#define EXIT_IGNORE_VAL 2
+#define EXIT_STOP_VAL 3
+#define EXIT_ABEND_VAL 4
+#define EXIT_CALL_START 1
+#define EXIT_CALL_BEGIN_TRANS 2
+#define EXIT_CALL_PROCESS_RECORD 3
+#define EXIT_CALL_DISCARD_RECORD 4
+#define EXIT_CALL_END_TRANS 5
+#define EXIT_CALL_STOP 6
+#define EXIT_CALL_FILE_CLOSE 7
+#define EXIT_CALL_DLL_UNLOAD 8
+#define EXIT_CALL_EXITNOTPRESENT 9
+#define EXIT_FN_RET_OK 0
+#define EXIT_FN_RET_INVALID_COLUMN 1
+#define EXIT_FN_RET_INVALID_CONTEXT 2
+#define EXIT_FN_RET_INVALID_PARAM 3
+#define EXIT_FN_RET_FETCH_ERROR 4
+#define EXIT_FN_RET_NOT_SUPPORTED 5
+#define EXIT_FN_RET_EXEC_ERROR 6
+#define EXIT_FN_RET_TOKEN_NOT_FOUND 7
+#define EXIT_FN_SOURCE_VAL 1
+#define EXIT_FN_TARGET_VAL 2
+#define EXIT_FN_CURRENT_VAL 3
+#define EXIT_ENV_SOURCE_FILE 1
+#define EXIT_ENV_SOURCE_FILE_EXT 2
+#define EXIT_ENV_TARGET_FILE 3
+#define EXIT_ENV_TARGET_FILE_EXT 4
+#define STOP_STATUS_NORMAL 0
+#define STOP_STATUS_ABEND 1
+#define BEGIN_TRANS_VAL 0
+#define MIDDLE_TRANS_VAL 1
+#define END_TRANS_VAL 2
+#define WHOLE_TRANS_VAL 3
+/*ASCII transaction indicator values*/
+#define ASCII_BEGIN_TRANS_VAL "0"
+#define ASCII_MIDDLE_TRANS_VAL "1"
+#define ASCII_END_TRANS_VAL "2"
+#define ASCII_WHOLE_TRANS_VAL "3"
+/* ASCII BEFORE/AFTER indicator values **/
+#define AFTER_IMAGE 65
+#define BEFORE_IMAGE 66
+#define TRACE_IMAGE 84
+#define HDR_IND_E 69
+#define FORMAT_TYPE_A 65
+#define FORMAT_TYPE_B 66
+#define FORMAT_TYPE_F 70
+#define FORMAT_TYPE_P 80
+#define FORMAT_TYPE_R 82
+#define BEFORE_IMAGE_VAL "B"
+#define AFTER_IMAGE_VAL "A"
+#define YES_VAL "Y"
+#define NO_VAL "N"
+#pragma section update_type_redef
+#pragma fieldalign shared2 __update_type_redef
+typedef struct __update_type_redef
+{
+   union
+   {
+      struct
+      {
+         char                            char1;
+         char                            char2;
+      } char_part;
+      struct
+      {
+         short                           update_type;
+      } num_part;
+   } u_char_part;
+} update_type_redef_def;
+#define update_type_redef_def_Size 2
+#pragma section exit_params
+typedef short                           exit_call_type_def;
+typedef short                           exit_result_def;
+#pragma fieldalign shared2 __exit_params
+typedef struct __exit_params
+{
+   struct
+   {
+      char                            volume[8];
+      char                            subvol[8];
+      char                            file_part[8];
+   } source_file;
+   unsigned short                  record_len;
+   char                            record_type[4];
+   short                           file_index;
+   long long                       audit_timestamp;
+   long long                       audit_rba;
+   short                           update_type;
+   char                            before_after_ind;
+   char                            function_param[256];
+   char                            more_recs_ind;
+   struct
+   {
+      short                           err_num;
+      short                           guardian_or_sql_err;
+      char                            err_msg[132];
+   } err_info;
+} exit_params_def;
+#define exit_params_def_Size 444
+typedef char                            exit_rec_buf_def[32767];
+#pragma section std_rec_hdr
+#pragma fieldalign shared2 __old_std_rec_hdr
+/* jas 10/01/02 case 4725 changes for 7.0 trail format */
+typedef struct __old_std_rec_hdr
+{
+   char                            hdr_ind;
+   char                            partition;
+   char                            undoflag;
+   char                            before_after_ind;
+   struct
+   {
+      char                            volume[8];
+      char                            subvol[8];
+      char                            file_part[8];
+   } fname;
+   unsigned short                  rec_len;
+   long long                       audit_ts;
+   unsigned long                   audit_rba;
+   char                            io_type;
+   char                            orig_node;
+   char                            trans_ind;
+   char                            format_type;
+   char                            syskey_len;
+   char                            incomplete_ind;
+} old_std_rec_hdr_def;
+#define old_std_rec_hdr_def_Size 48
+#pragma fieldalign shared2 __external_std_rec_hdr
+/* jas 10/01/02 case 4725 changes for 7.0 trail format */
+/**/
+/* this structure is written to the trail as the data for */
+/* the header token */
+/**/
+typedef struct __external_std_rec_hdr
+{
+   char                            hdr_ind;
+   char                            partition;
+   char                            undoflag;
+   char                            before_after_ind;
+   unsigned short                  rec_len;
+   char                            io_type;
+   char                            orig_node;
+   long long                       audit_ts;
+   long long                       audit_pos;
+   unsigned long                   audit_rba;
+   char                            trans_ind;
+   char                            format_type;
+   char                            syskey_len;
+   char                            incomplete_ind;
+/* more data for this record in next one */
+   char                            continued;
+   char                            rec_count;
+/* IMPORTANT:  table must be the last member in the structure */
+/* since it's used for length calculations. */
+   char                            table[300];
+} external_std_rec_hdr_def;
+#define external_std_rec_hdr_def_Size 334
+#pragma fieldalign shared2 __tkn_hdr
+typedef struct __tkn_hdr
+{
+   char                            hdr_ind;
+   char                            info;
+   short                           len;
+} tkn_hdr_def;
+#define tkn_hdr_def_Size 4
+#pragma fieldalign shared2 __std_rec_hdr
+/* this structure is internal to E/R and is mod8 length */
+typedef struct __std_rec_hdr
+{
+   char                            hdr_ind;
+   char                            partition;
+   char                            undoflag;
+   char                            before_after_ind;
+   unsigned short                  rec_len;
+   char                            io_type;
+   char                            orig_node;
+   long long                       audit_ts;
+   long long                       audit_pos;
+   unsigned long                   audit_rba;
+   char                            trans_ind;
+   char                            format_type;
+   char                            syskey_len;
+   char                            incomplete_ind;
+/* more data for this record in next one */
+   char                            continued;
+   char                            rec_count;
+   struct
+   {
+      char                            volume[8];
+      char                            subvol[8];
+      char                            file_part[8];
+   } fname;
+   char                            rec_hdr_info;
+   char                            rec_data_info;
+   char                            rec_ggs_info;
+   char                            rec_user_info;
+   char                            futureuse[6];
+/* FALSE if back level */
+   short                           rec_info_usable;
+/* True if this record is coming from v10 and has a trailheader */
+   short                           newtrailset;
+/* Pointer to the trail header object */
+   long                            trailheader;
+   char                            table[300];
+} std_rec_hdr_def;
+#define std_rec_hdr_def_Size 376
+#pragma section discard_rec
+#pragma fieldalign shared2 __discard_rec
+typedef struct __discard_rec
+{
+   struct
+   {
+      char                            err[3];
+      char                            filler_0;
+      char                            more_info[6];
+      char                            ext_fname[34];
+      char                            targ_fname[34];
+      char                            io_type[4];
+      char                            ts[20];
+      char                            sep[4];
+      /*value is "****"*/
+   } hdr;
+   char                            buf[3900];
+} discard_rec_def;
+#define discard_rec_def_Size 4006
+#pragma section error_info
+#pragma fieldalign shared2 __error_info
+typedef struct __error_info
+{
+   long                            error_num;
+   char                            error_msg[600];
+   long                            max_length;
+   long                            actual_length;
+   short                           msg_truncated;
+} error_info_def;
+#define error_info_def_Size 614
+#pragma section tokens
+#pragma fieldalign shared2 __user_token_value
+typedef struct __user_token_value
+{
+   char                            token_name[256];
+   short                           actual_length;
+   char                            token_value_buf[2000];
+} user_token_value_def;
+#define user_token_value_def_Size 2258
+#pragma fieldalign shared2 __gg_token_value
+typedef struct __gg_token_value
+{
+   short                           token_id;
+   short                           ascii_or_binary;
+   short                           actual_length;
+   char                            token_value_buf[2000];
+} gg_token_value_def;
+#define gg_token_value_def_Size 2006
